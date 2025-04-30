@@ -1,0 +1,35 @@
+:root {
+  font-family: var(--sapFontFamily);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--sapBackgroundColor);
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+p {
+  color: var(--sapContent_LabelColor);
+}
+
+main {
+  padding: 1rem 2rem;
+}
+
+/*
+Overwrite default styles for <button type="submit">
+Used by Authjs in <SignIn> / <SignOut> components
+ */
+/* button[type="submit"] {
+  all: unset;
+  cursor: pointer;
+  display: inline;
+} */

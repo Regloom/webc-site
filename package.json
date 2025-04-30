@@ -1,0 +1,26 @@
+{
+  "name": "fiori-launchpad-template",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-node": "^5.2.12",
+    "@sveltejs/kit": "^2.20",
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "svelte": "^5.0.0",
+    "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "@auth/sveltekit": "latest",
+    "@ui5/webcomponents": "^2.6.0",
+    "@ui5/webcomponents-fiori": "^2.6.0",
+    "@ui5/webcomponents-icons": "^2.6.0",
+    "playground-elements": "^0.20.0"
+  }
+}
