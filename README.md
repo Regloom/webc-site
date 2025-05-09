@@ -4,7 +4,7 @@ Site running on Node.JS with Svelte, Vite and UI5 webcomponents.
 
 ## Recommended IDE Setup
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [UI5 Web Components](https://sap.github.io/ui5-webcomponents/).
 
 ## Need an official Svelte framework?
 
