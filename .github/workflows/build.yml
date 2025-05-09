@@ -55,4 +55,4 @@ jobs:
           server: https://toegor.app
           app: 'sveltekit'
           token: '${{ secrets.APP_TOKEN }}'
-          image: 'ghcr.io/Regloom/webc-site:main'
+          image: 'ghcr.io/regloom/webc-site:main'
