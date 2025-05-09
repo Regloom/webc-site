@@ -17,7 +17,7 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "@auth/sveltekit": "latest",
+    "@auth/sveltekit": "1.7.4",
     "@ui5/webcomponents": "^2.6.0",
     "@ui5/webcomponents-fiori": "^2.6.0",
     "@ui5/webcomponents-icons": "^2.6.0",
