@@ -1,6 +1,6 @@
-# Svelte + Vite
+# Svelte + Vite + UI5 Webcomponents
 
-This template should help get you started developing with Svelte in Vite.
+Site running on Node.JS with Svelte, Vite and UI5 webcomponents.
 
 ## Recommended IDE Setup
 
