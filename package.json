@@ -17,10 +17,11 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "@auth/sveltekit": "1.7.4",
+    "@auth/sveltekit": "1.9.1",
     "@ui5/webcomponents": "^2.6.0",
     "@ui5/webcomponents-fiori": "^2.6.0",
     "@ui5/webcomponents-icons": "^2.6.0",
+    "patch-package": "^8.0.0",
     "playground-elements": "^0.20.0"
   }
 }

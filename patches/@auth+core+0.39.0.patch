@@ -1,0 +1,14 @@
+diff --git a/node_modules/@auth/core/lib/utils/web.js b/node_modules/@auth/core/lib/utils/web.js
+index 3078e70..a7fb3f9 100644
+--- a/node_modules/@auth/core/lib/utils/web.js
++++ b/node_modules/@auth/core/lib/utils/web.js
+@@ -102,5 +102,8 @@ export function parseActionAndProviderId(pathname, base) {
+     if (providerId &&
+         !["signin", "callback", "webauthn-options"].includes(action))
+         throw new UnknownAction(`Cannot parse action at ${pathname}`);
+-    return { action, providerId };
++    return {
++        action, 
++        providerId: providerId == "undefined" ? undefined : providerId 
++    }
+ }
