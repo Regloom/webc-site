@@ -54,7 +54,7 @@ export default {
       subtitle: 'Clean core · since 2024',
       description: 'SAP BTP extensions for SAP Business One — now focused on GAEB tenders.'
     },
-    github: { title: 'GitHub', subtitle: 'More code' },
+    github: { title: 'GitHub' },
     email: { title: 'Email' },
     linkedin: { title: 'LinkedIn', subtitle: '@toegor' },
     telegram: { title: 'Telegram' }

@@ -20,14 +20,14 @@
   const projects = [
     { id: 'frischluftmanager', href: resolve('/projects/[slug]', { slug: 'frischluftmanager' }), icon: 'weather-proofing', tags: ['SAP BTP', 'HANA Cloud', 'SAP B1'], wide: true },
     { id: 'penka', href: resolve('/projects/[slug]', { slug: 'penka' }), icon: 'factory', tags: ['SAP BTP', 'SAP B1', 'GAEB'], wide: true },
-    { id: 'site', href: CONTACTS.repo, tags: ['Svelte 5', 'UI5'], wide: true, external: true },
-    { id: 'github', href: CONTACTS.github, icon: 'source-code', external: true }
+    { id: 'site', href: CONTACTS.repo, tags: ['Svelte 5', 'UI5'], wide: true, external: true }
   ];
 
   const contacts = [
-    { id: 'email', href: `mailto:${CONTACTS.email}`, icon: 'email', subtitle: CONTACTS.email },
+    { id: 'email', href: `mailto:${CONTACTS.email}`, icon: 'email', subtitle: CONTACTS.email, wide: true },
     { id: 'linkedin', href: CONTACTS.linkedin, icon: 'business-card', external: true },
-    { id: 'telegram', href: CONTACTS.telegram, icon: 'paper-plane', subtitle: `@${CONTACTS.telegram.split('/').pop()}`, external: true }
+    { id: 'telegram', href: CONTACTS.telegram, icon: 'paper-plane', subtitle: `@${CONTACTS.telegram.split('/').pop()}`, external: true },
+    { id: 'github', href: CONTACTS.github, icon: 'source-code', subtitle: `@${CONTACTS.github.split('/').pop()}`, external: true }
   ];
 
   const groups = [

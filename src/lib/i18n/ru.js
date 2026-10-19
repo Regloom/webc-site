@@ -54,7 +54,7 @@ export default {
       subtitle: 'Clean core · с 2024 года',
       description: 'Расширения SAP BTP для SAP Business One — сейчас в фокусе тендеры GAEB.'
     },
-    github: { title: 'GitHub', subtitle: 'Больше кода' },
+    github: { title: 'GitHub' },
     email: { title: 'Email' },
     linkedin: { title: 'LinkedIn', subtitle: '@toegor' },
     telegram: { title: 'Telegram' }
