@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="%lang%" data-theme="%theme%">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <meta name="color-scheme" content="dark light" /> -->
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" sizes="128x128" />
+    <script data-ui5-config type="application/json">{ "theme": "%ui5-theme%", "language": "%ui5-lang%" }</script>
+    <style>
+      /* Horizon background before UI5 theme variables are loaded */
+      html { background: #f5f6f7; }
+      html[data-theme='dark'] { background: #12171c; }
+      @media (prefers-color-scheme: dark) {
+        html[data-theme='auto'] { background: #12171c; }
+      }
+    </style>
     %sveltekit.head%
   </head>
   <body data-sveltekit-preload-data="hover">
     <div id="app">%sveltekit.body%</div>
-    
-    <!-- <script>
-			const theme = new URL(window.location).searchParams.get('theme');
-
-			document.documentElement.classList.remove('light', 'dark');
-			document.documentElement.classList.add(theme || 'light');    
-		</script> -->
   </body>
 </html>

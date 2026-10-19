@@ -1,35 +1,71 @@
 :root {
+  --page-width: 75rem;
+  --page-gutter: 2rem;
   font-family: var(--sapFontFamily);
+  font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --page-gutter: 1rem;
+  }
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
   background-color: var(--sapBackgroundColor);
+  color: var(--sapTextColor);
+  font-size: var(--sapFontSize);
 }
 
 #app {
-  width: 100%;
   min-height: 100vh;
-}
-
-p {
-  color: var(--sapContent_LabelColor);
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  padding: 1rem 2rem;
+  flex: 1;
 }
 
-/*
-Overwrite default styles for <button type="submit">
-Used by Authjs in <SignIn> / <SignOut> components
- */
-/* button[type="submit"] {
-  all: unset;
-  cursor: pointer;
-  display: inline;
-} */
+/* Shared page layout */
+.page {
+  box-sizing: border-box;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 1.5rem var(--page-gutter);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 28rem), 1fr));
+  gap: 1rem;
+}
+
+.card-body {
+  padding: 0 1rem 1rem;
+}
+
+.card-body p {
+  margin: 0 0 0.75rem;
+  line-height: 1.6;
+}
+
+.card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}

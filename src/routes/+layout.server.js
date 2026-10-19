@@ -1,5 +1,4 @@
-export const load = async (event) => {
-  return {
-    session: await event.locals.auth(),
-  };
-};
+export const load = ({ locals }) => ({
+  lang: locals.lang,
+  theme: locals.theme
+});

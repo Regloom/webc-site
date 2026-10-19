@@ -1,96 +1,79 @@
 <script>
-  import "@ui5/webcomponents/dist/Card.js";
-  import "@ui5/webcomponents/dist/CardHeader.js";
-  import "@ui5/webcomponents/dist/Icon.js";
-  import "@ui5/webcomponents-icons/dist/AllIcons.js";
-  
-  const pages = [
-    // {
-    //   title: "Applications",
-    //   subtitle: "Our Solutions",
-    //   icon: "business-objects-experience",
-    //   link: "/applications"
-    // },
-    {
-      title: "Services",
-      subtitle: "Professional Services",
-      icon: "customer-briefing",
-      link: "/services"
-    },
-    {
-      title: "About",
-      subtitle: "Get in Touch",
-      icon: "contacts",
-      link: "/me"
-    }
-  ];
-  const apps = [
-    {
-      title: "Sample 1",
-      subtitle: "keep it simple",
-      icon: "business-objects-experience",
-      link: "/applications"
-    }
+  import { resolve } from '$app/paths';
+  import Tile from '$lib/components/Tile.svelte';
+  import TileGroup from '$lib/components/TileGroup.svelte';
+  import { CONTACTS } from '$lib/config.js';
+  import { getSettings } from '$lib/settings.svelte.js';
+
+  const settings = getSettings();
+  let t = $derived(settings.t);
+
+  const about = [
+    { id: 'profile', href: resolve('/me'), icon: 'employee' },
+    { id: 'experience', href: resolve('/experience'), kpi: '15+' },
+    { id: 'services', href: resolve('/services'), icon: 'customer-briefing' },
+    { id: 'cv', href: CONTACTS.cv, icon: 'download', external: true }
   ];
 
+  // TODO: add real projects here (and their texts under `tiles` in src/lib/i18n/*.js)
+  const projects = [
+    { id: 'site', href: CONTACTS.repo, tags: ['Svelte 5', 'UI5'], wide: true, external: true },
+    { id: 'github', href: CONTACTS.github, icon: 'source-code', external: true }
+  ];
+
+  const contacts = [
+    { id: 'email', href: `mailto:${CONTACTS.email}`, icon: 'email' },
+    { id: 'linkedin', href: CONTACTS.linkedin, icon: 'business-card', external: true },
+    { id: 'telegram', href: CONTACTS.telegram, icon: 'paper-plane', external: true }
+  ];
+
+  const groups = [
+    { id: 'about', tiles: about },
+    { id: 'projects', tiles: projects },
+    { id: 'contact', tiles: contacts }
+  ];
 </script>
 
-<ui5-title level="H3">Pages</ui5-title>
-<div class="grid">
-  {#each pages as tile}
-    <a href={tile.link} aria-label="{tile.title}">
-      <ui5-card class="tile">         
-        <ui5-card-header
-          slot="header"
-          title-text={tile.title}
-          subtitle-text={tile.subtitle}
-          interactive>
-          <!-- <ui5-icon name={tile.icon} slot="avatar"></ui5-icon> -->
-        </ui5-card-header>
-        <ui5-icon name={tile.icon} class="tile-icon"></ui5-icon>
-      </ui5-card>
-    </a>
-  {/each}
-</div>
+<div class="page">
+  <section class="intro">
+    <h1>{t.home.hello}</h1>
+    <p class="tagline">{t.home.tagline}</p>
+    <p class="hint">{t.home.hint}</p>
+  </section>
 
-<ui5-title level="H3">Demo applications</ui5-title>
-<div class="grid">
-  {#each apps as tile}
-    <a href={tile.link} aria-label="{tile.title}">
-      <ui5-card class="tile">         
-        <ui5-card-header
-          slot="header"
-          title-text={tile.title}
-          subtitle-text={tile.subtitle}
-          interactive>
-          <!-- <ui5-icon name={tile.icon} slot="avatar"></ui5-icon> -->
-        </ui5-card-header>
-        <ui5-icon name={tile.icon} class="tile-icon"></ui5-icon>
-      </ui5-card>
-    </a>
+  {#each groups as group (group.id)}
+    <TileGroup title={t.home.groups[group.id]}>
+      {#each group.tiles as tile (tile.id)}
+        <Tile {...tile} {...t.tiles[tile.id]} />
+      {/each}
+    </TileGroup>
   {/each}
 </div>
 
 <style>
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    grid-auto-rows: minmax(160px, auto);
-    gap: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
+  .intro {
+    max-width: 46rem;
+    margin: 1rem 0 2.5rem;
   }
 
-  .tile {
-    height: 100%;
+  h1 {
+    margin: 0 0 0.75rem;
+    font-family: var(--sapFontHeaderFamily, var(--sapFontBoldFamily));
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: normal;
+    line-height: 1.2;
+    color: var(--sapTitleColor);
   }
 
-  .tile-icon {
-    position: absolute;
-    bottom: 2rem;
-    left: 1rem;
-    height: 2rem;
-    width: 2rem;
+  .tagline {
+    margin: 0 0 0.5rem;
+    font-size: var(--sapFontLargeSize);
+    line-height: 1.6;
+    color: var(--sapTextColor);
   }
 
+  .hint {
+    margin: 0;
+    color: var(--sapContent_LabelColor);
+  }
 </style>

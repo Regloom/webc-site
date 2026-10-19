@@ -1,48 +1,35 @@
-# Svelte + Vite + UI5 Webcomponents
+# toegor.app
 
-Site running on Node.JS with Svelte, Vite and UI5 webcomponents.
+Personal site of Egor Tokarev, built to look like an **SAP Fiori launchpad** (Horizon theme) out of
+[UI5 Web Components](https://ui5.github.io/webcomponents/) and **SvelteKit / Svelte 5**.
 
-## Recommended IDE Setup
+- Launchpad home page with tile groups, plus "apps" for Profile, Experience and Services
+- Light / dark / system theme (`sap_horizon`, `sap_horizon_dark`, `sap_horizon_auto`)
+- English and Russian, picked from the `lang` cookie or the browser's `Accept-Language`
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [UI5 Web Components](https://sap.github.io/ui5-webcomponents/).
+## Development
 
-## Need an official Svelte framework?
-
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
-
-## Technical considerations
-
-**Why use this over SvelteKit?**
-
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+```sh
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # production build (adapter-node) in ./build
+node build       # run the production build
 ```
 
+Docker image: `docker build -t webc-site .` (the GitHub workflow builds it and deploys to CapRover).
+
+## Where things live
+
+| What | Where |
+| --- | --- |
+| All texts (EN / RU) | `src/lib/i18n/en.js`, `src/lib/i18n/ru.js` |
+| Contacts, CV path, theme and language lists | `src/lib/config.js` |
+| Launchpad tiles and groups | `src/routes/+page.svelte` |
+| Tile component (GenericTile look-alike) | `src/lib/components/Tile.svelte` |
+| UI5 components and icons in use | `src/lib/ui5.js` |
+| Theme and language state | `src/lib/settings.svelte.js` (context), `src/hooks.server.js` (cookies to SSR) |
+
+To add a tile: add an entry to one of the groups in `src/routes/+page.svelte`, its title and subtitle
+under `tiles` in both dictionaries, and import its icon in `src/lib/ui5.js`.
+
+The CV is served from `static/Egor_Tokarev_CV.pdf`.

@@ -1,47 +1,74 @@
 <script>
-  import "@ui5/webcomponents/dist/Title.js";
-  import "@ui5/webcomponents/dist/Panel.js";
-  // import { onMount } from 'svelte';
+  import PageHeader from '$lib/components/PageHeader.svelte';
+  import { click, openLink } from '$lib/attachments.js';
+  import { CONTACTS } from '$lib/config.js';
+  import { getSettings } from '$lib/settings.svelte.js';
 
-  // let mounted = false;
-  // onMount(() => mounted = true);
+  const settings = getSettings();
+  let t = $derived(settings.t);
+  let services = $derived(t.services);
 </script>
 
-<!-- {#if mounted} -->
-  <div class="page-container">
-    <ui5-title level="H1">Our Services</ui5-title>
-    <p>Professional services tailored to meet your business needs.</p>
+<svelte:head>
+  <title>{services.title} · {t.shell.name}</title>
+</svelte:head>
 
-    <ui5-panel>
-      <div slot="header">Consulting Services</div>
-      <p>Strategic IT consulting to help you make the right technology decisions.</p>
-    </ui5-panel>
+<PageHeader title={services.title} subtitle={services.subtitle} />
 
-    <ui5-panel>
-      <div slot="header">Implementation Services</div>
-      <p>Expert implementation of SAP solutions and custom development.</p>
-    </ui5-panel>
+<div class="page cards">
+  {#each services.items as service (service.icon)}
+    <ui5-card>
+      <ui5-card-header slot="header" title-text={service.title}>
+        <ui5-icon slot="avatar" name={service.icon}></ui5-icon>
+      </ui5-card-header>
+      <ul class="card-body points">
+        {#each service.points as point (point)}
+          <li>{point}</li>
+        {/each}
+      </ul>
+    </ui5-card>
+  {/each}
 
-    <ui5-panel>
-      <div slot="header">Training Services</div>
-      <p>Comprehensive training programs for your team.</p>
-    </ui5-panel>
-
-    <ui5-panel>
-      <div slot="header">Support Services</div>
-      <p>24/7 technical support and maintenance services.</p>
-    </ui5-panel>
-  </div>
-<!-- {/if} -->
+  <ui5-card class="full-width">
+    <div class="cta">
+      <div>
+        <h2>{services.cta.title}</h2>
+        <p>{services.cta.text}</p>
+      </div>
+      <ui5-button design="Emphasized" icon="email" {@attach click(() => openLink(`mailto:${CONTACTS.email}`))}>
+        {services.cta.button}
+      </ui5-button>
+    </div>
+  </ui5-card>
+</div>
 
 <style>
-  .page-container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  .points {
+    margin: 0;
+    padding-left: 2.25rem;
+    line-height: 1.8;
+    color: var(--sapTextColor);
   }
-  ui5-panel {
-    margin-bottom: 1rem;
-    display: block;
+
+  .cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .cta h2 {
+    margin: 0 0 0.25rem;
+    font-family: var(--sapFontHeaderFamily, var(--sapFontBoldFamily));
+    font-size: var(--sapFontHeader5Size);
+    font-weight: normal;
+    color: var(--sapTitleColor);
+  }
+
+  .cta p {
+    margin: 0;
+    color: var(--sapContent_LabelColor);
   }
 </style>
