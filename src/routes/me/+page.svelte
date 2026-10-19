@@ -1,8 +1,8 @@
 <script>
-  import PageHeader from '$lib/components/PageHeader.svelte';
-  import { click, openLink } from '$lib/attachments.js';
-  import { CONTACTS } from '$lib/config.js';
-  import { getSettings } from '$lib/settings.svelte.js';
+  import PageHeader from '#lib/components/PageHeader.svelte';
+  import { click, openLink } from '#lib/attachments.js';
+  import { CONTACTS } from '#lib/config.js';
+  import { getSettings } from '#lib/settings.svelte.js';
 
   const settings = getSettings();
   let t = $derived(settings.t);
@@ -29,6 +29,22 @@
       {#each me.about.paragraphs as paragraph (paragraph)}
         <p>{paragraph}</p>
       {/each}
+    </div>
+  </ui5-card>
+
+  <ui5-card id="ai" class="full-width">
+    <ui5-card-header slot="header" title-text={me.ai.title}>
+      <ui5-icon slot="avatar" name="ai"></ui5-icon>
+    </ui5-card-header>
+    <div class="card-body">
+      {#each me.ai.paragraphs as paragraph (paragraph)}
+        <p>{paragraph}</p>
+      {/each}
+      <ul class="tag-list">
+        {#each me.ai.items as item (item)}
+          <li><ui5-tag design="Set2" color-scheme="7" hide-state-icon>{item}</ui5-tag></li>
+        {/each}
+      </ul>
     </div>
   </ui5-card>
 

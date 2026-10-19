@@ -1,8 +1,9 @@
 <script>
-  import PageHeader from '$lib/components/PageHeader.svelte';
-  import { click, openLink } from '$lib/attachments.js';
-  import { CONTACTS } from '$lib/config.js';
-  import { getSettings } from '$lib/settings.svelte.js';
+  import PageHeader from '#lib/components/PageHeader.svelte';
+  import { resolve } from '$app/paths';
+  import { click, openLink } from '#lib/attachments.js';
+  import { CONTACTS } from '#lib/config.js';
+  import { getSettings } from '#lib/settings.svelte.js';
 
   const settings = getSettings();
   let t = $derived(settings.t);
@@ -26,6 +27,13 @@
         {#each experience.items as item (item.company + item.period)}
           <ui5-timeline-item title-text={item.company} subtitle-text={`${item.role} · ${item.period}`} icon={item.icon}>
             <p>{item.text}</p>
+            {#if item.projects}
+              <p class="links">
+                {#each item.projects as slug (slug)}
+                  <a class="link" href={resolve('/projects/[slug]', { slug })}>{t.projects[slug].title} →</a>
+                {/each}
+              </p>
+            {/if}
             <ul class="tag-list">
               {#each item.tags as tag (tag)}
                 <li><ui5-tag design="Information" hide-state-icon>{tag}</ui5-tag></li>
@@ -71,6 +79,16 @@
   .timeline p {
     margin: 0 0 0.75rem;
     line-height: 1.6;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .link {
+    color: var(--sapLinkColor);
   }
 
   .card-body p {

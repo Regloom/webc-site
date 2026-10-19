@@ -1,14 +1,14 @@
 <script>
   import '../app.css';
-  import '$lib/ui5.js';
+  import '#lib/ui5.js';
 
   import { untrack } from 'svelte';
   import { goto } from '$app/navigation';
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
-  import { click, openLink } from '$lib/attachments.js';
-  import { CONTACTS, LANGS, THEMES } from '$lib/config.js';
-  import { Settings, setSettings } from '$lib/settings.svelte.js';
+  import { click, openLink } from '#lib/attachments.js';
+  import { CONTACTS, LANGS, THEMES } from '#lib/config.js';
+  import { Settings, setSettings } from '#lib/settings.svelte.js';
 
   let { data, children } = $props();
 
@@ -68,7 +68,6 @@
     <div>
       <div class="profile-name">{t.shell.name}</div>
       <div class="profile-role">{t.shell.role}</div>
-      <div class="profile-role">{t.shell.location}</div>
     </div>
   </div>
 

@@ -5,17 +5,18 @@
    *   title: string,
    *   subtitle?: string,
    *   initials?: string,
+   *   icon?: string,
    *   children?: import('svelte').Snippet,
    *   actions?: import('svelte').Snippet
    * }}
    */
-  let { title, subtitle, initials, children, actions } = $props();
+  let { title, subtitle, initials, icon, children, actions } = $props();
 </script>
 
 <header class="page-header">
   <div class="inner">
-    {#if initials}
-      <ui5-avatar initials={initials} size="L" color-scheme="Accent6" class="avatar"></ui5-avatar>
+    {#if initials || icon}
+      <ui5-avatar {initials} {icon} size="L" color-scheme="Accent6" class="avatar"></ui5-avatar>
     {/if}
 
     <div class="text">

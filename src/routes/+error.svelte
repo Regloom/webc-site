@@ -1,7 +1,7 @@
 <script>
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
-  import { getSettings } from '$lib/settings.svelte.js';
+  import { getSettings } from '#lib/settings.svelte.js';
 
   const settings = getSettings();
   let t = $derived(settings.t);

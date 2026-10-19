@@ -1,6 +1,6 @@
-import { pickLang, pickTheme, UI5_THEMES } from '$lib/config.js';
+import { pickLang, pickTheme, UI5_THEMES } from '#lib/config.js';
 
-/** @type {import('@sveltejs/kit').Handle} */
+/** @type {import('@sveltejs/kit/hooks').Handle} */
 export async function handle({ event, resolve }) {
   const lang = pickLang(event.cookies.get('lang'), event.request.headers.get('accept-language'));
   const theme = pickTheme(event.cookies.get('theme'));

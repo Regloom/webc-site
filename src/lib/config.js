@@ -9,9 +9,9 @@ export const UI5_THEMES = {
 };
 
 export const CONTACTS = {
-  email: 'egor@toegor.app',
+  email: 'tokarevegorka@gmail.com', // TODO: switch to mail@toegor.app once mail is set up
   linkedin: 'https://www.linkedin.com/in/toegor',
-  telegram: 'https://t.me/toegor',
+  telegram: 'https://t.me/Regloom',
   github: 'https://github.com/Regloom',
   repo: 'https://github.com/Regloom/webc-site',
   cv: '/Egor_Tokarev_CV.pdf'

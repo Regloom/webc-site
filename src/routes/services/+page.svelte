@@ -1,8 +1,8 @@
 <script>
-  import PageHeader from '$lib/components/PageHeader.svelte';
-  import { click, openLink } from '$lib/attachments.js';
-  import { CONTACTS } from '$lib/config.js';
-  import { getSettings } from '$lib/settings.svelte.js';
+  import PageHeader from '#lib/components/PageHeader.svelte';
+  import { click, openLink } from '#lib/attachments.js';
+  import { CONTACTS } from '#lib/config.js';
+  import { getSettings } from '#lib/settings.svelte.js';
 
   const settings = getSettings();
   let t = $derived(settings.t);
@@ -17,7 +17,7 @@
 
 <div class="page cards">
   {#each services.items as service (service.icon)}
-    <ui5-card>
+    <ui5-card class={{ 'full-width': service.wide }}>
       <ui5-card-header slot="header" title-text={service.title}>
         <ui5-icon slot="avatar" name={service.icon}></ui5-icon>
       </ui5-card-header>
