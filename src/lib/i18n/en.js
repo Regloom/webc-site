@@ -101,7 +101,7 @@ export default {
       title: 'AI-assisted development',
       paragraphs: [
         'AI is part of my everyday engineering workflow, not an experiment. I use AI coding agents and SAP Joule to generate CDS data models, CAP services and Fiori Elements UI annotations, and I review every change as an SAP expert before it ships.',
-        'My toolkit: Claude Code, GitHub Copilot and opencode with ChatGPT, DeepSeek, Big Pickle and other models — extended with MCP servers and agent skills for documentation lookup, code checks and project-specific workflows.',
+        'My toolkit: Claude Code, GitHub Copilot and opencode with ChatGPT, Big Pickle and other models — extended with MCP servers and agent skills for documentation lookup, code checks and project-specific workflows.',
         'This website is an example: it was redesigned with Claude Code, using the official Svelte MCP server and skills for documentation lookup and code checks.'
       ],
       items: [
@@ -112,7 +112,7 @@ export default {
         'GitHub Copilot',
         'opencode',
         'ChatGPT',
-        'DeepSeek',
+        'Big Pickle',
         'SAP Joule',
         'MCP (Model Context Protocol)',
         'Agent skills',

@@ -101,7 +101,7 @@ export default {
       title: 'Разработка с ИИ',
       paragraphs: [
         'ИИ для меня — часть ежедневной инженерной работы, а не эксперимент. С помощью ИИ-агентов и SAP Joule генерирую модели данных на CDS, сервисы на CAP и UI-аннотации Fiori Elements, а каждое изменение проверяю как эксперт SAP, прежде чем оно уйдёт в работу.',
-        'Мой набор инструментов: Claude Code, GitHub Copilot и opencode с ChatGPT, DeepSeek, Big Pickle и другими моделями — плюс MCP-серверы и agent skills для поиска по документации, проверки кода и workflow под конкретный проект.',
+        'Мой набор инструментов: Claude Code, GitHub Copilot и opencode с ChatGPT, Big Pickle и другими моделями — плюс MCP-серверы и agent skills для поиска по документации, проверки кода и workflow под конкретный проект.',
         'Пример — этот сайт: его редизайн сделан с Claude Code, с официальным Svelte MCP-сервером и skills для поиска по документации и проверки кода.'
       ],
       items: [
@@ -112,7 +112,7 @@ export default {
         'GitHub Copilot',
         'opencode',
         'ChatGPT',
-        'DeepSeek',
+        'Big Pickle',
         'SAP Joule',
         'MCP (Model Context Protocol)',
         'Agent skills',
