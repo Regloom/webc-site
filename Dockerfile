@@ -1,4 +1,4 @@
-FROM node:20.18-alpine AS sk-build
+FROM node:24-alpine AS sk-build
 WORKDIR /usr/src/app
 
 ARG TZ=Europe/Berlin
@@ -10,7 +10,7 @@ RUN cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN npm install
 RUN npm run build
 
-FROM node:20.18-alpine
+FROM node:24-alpine
 WORKDIR /usr/src/app
 
 ARG TZ=Europe/Berlin
