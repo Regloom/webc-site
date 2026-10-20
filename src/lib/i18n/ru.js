@@ -1,8 +1,16 @@
 export default {
   meta: {
-    title: 'Егор Токарев — SAP BTP разработчик',
+    title: 'Егор Токарев — full-stack разработчик и архитектор SAP BTP',
     description:
-      'Full-stack разработчик и архитектор SAP BTP, более 15 лет в SAP: CAP, SAP HANA, Fiori/UI5, Cloud Foundry, SAP Banking — и разработка с ИИ: Claude Code, GitHub Copilot и SAP Joule.'
+      'Full-stack разработчик и архитектор SAP BTP, 15+ лет в SAP: CAP, HANA Cloud, Fiori/UI5, SAP Business One, clean core и разработка с ИИ.'
+  },
+
+  seo: {
+    jobTitle: 'Full-stack разработчик и архитектор SAP BTP',
+    imageAlt: 'Егор Токарев — full-stack разработчик и архитектор SAP BTP',
+    me: 'Профиль Егора Токарева, full-stack разработчика и архитектора SAP BTP: CAP, SAP HANA Cloud, Fiori/UI5, SAP Business One, SAP Banking и разработка с ИИ.',
+    experience: '15+ лет в SAP: full-stack разработка на SAP BTP, 9 лет в SAP экспертом Payment Engine и Banking Services, SAP Fioneer, Accenture. Образование и сертификаты.',
+    services: 'Разработка на SAP BTP с CAP и HANA Cloud, приложения Fiori/UI5, расширения SAP Business One по принципу clean core, консалтинг SAP Banking и разработка с ИИ.'
   },
 
   shell: {
@@ -46,13 +54,13 @@ export default {
     },
     frischluftmanager: {
       title: 'Frischluftmanager',
-      subtitle: 'actoVent · с 2024 года',
+      subtitle: 'actoVent · с 2023 года',
       description: 'Свежий воздух как сервис: цифровая платформа для эксплуатации вентиляции на SAP BTP.'
     },
     penka: {
       title: 'penka',
-      subtitle: 'Clean core · с 2024 года',
-      description: 'Расширения SAP BTP для SAP Business One — сейчас в фокусе тендеры GAEB.'
+      subtitle: 'Clean core · с 2023 года',
+      description: 'Расширения SAP BTP для SAP Business One — сейчас автоматизация тендеров (GAEB).'
     },
     github: { title: 'GitHub' },
     email: { title: 'Email' },
@@ -143,7 +151,7 @@ export default {
         company: 'actoVent GmbH',
         role: 'Senior Software Developer',
         period: 'ноя 2023 — н. в.',
-        text: 'Full-stack разработка на SAP BTP в Cloud Foundry по best practices SAP: бэкенд на CAP, интерфейсы на Fiori Elements. С 2024 года активно развиваю и поддерживаю два проекта одной группы компаний: платформу Frischluftmanager, включая её складской модуль, и расширения SAP BTP по принципу clean core для penka, сейчас с фокусом на тендеры GAEB. Оба работают на SAP HANA Cloud с интеграцией с on-premise SAP Business One.',
+        text: 'Full-stack разработка на SAP BTP в Cloud Foundry по best practices SAP: бэкенд на CAP, интерфейсы на Fiori Elements. С 2023 года работаю над двумя проектами одной группы: переписал платформу Frischluftmanager с нуля, развиваю и поддерживаю её, включая складской модуль, и делаю расширения SAP BTP по принципу clean core для penka, сейчас с фокусом на автоматизацию процесса тендеров на основе GAEB. Оба работают на SAP HANA Cloud с интеграцией с on-premise SAP Business One.',
         tags: ['SAP BTP', 'SAP HANA Cloud', 'CAP', 'Fiori Elements', 'SAP Business One', 'GAEB'],
         projects: ['frischluftmanager', 'penka']
       },
@@ -268,13 +276,12 @@ export default {
     website: 'Открыть сайт',
     youtube: 'YouTube-канал',
     role: 'Моя роль',
-    videos: 'Видео',
-    videosNote: 'Видео на немецком языке.',
     play: 'Смотреть видео',
 
     frischluftmanager: {
+      description: 'Frischluftmanager: свежий воздух как сервис на SAP BTP — дашборды, обслуживание фильтров и складской модуль с интеграцией с SAP Business One.',
       title: 'Frischluftmanager',
-      subtitle: 'Свежий воздух как сервис · actoVent · с 2024 года',
+      subtitle: 'Свежий воздух как сервис · actoVent · с 2023 года',
       about: {
         title: 'О продукте',
         paragraphs: [
@@ -296,7 +303,7 @@ export default {
           ]
         },
         {
-          title: 'Складской модуль (моя разработка)',
+          title: 'Складской модуль',
           items: [
             { icon: 'shelf', text: 'Хранение и учёт запасов' },
             { icon: 'bar-code', text: 'Сканирование товаров в мобильных приложениях на SAPUI5' },
@@ -309,7 +316,7 @@ export default {
         }
       ],
       role: [
-        'Активная разработка и поддержка платформы с 2024 года',
+        'Переписал платформу с нуля; развиваю и поддерживаю её с 2023 года',
         'Full-stack разработка на SAP BTP, Cloud Foundry и SAP HANA Cloud',
         'Сервисы на CAP (Node.js) и модели данных на CDS',
         'Приложения Fiori Elements и SAPUI5 в SAP BTP launchpad',
@@ -319,8 +326,9 @@ export default {
     },
 
     penka: {
+      description: 'Расширения SAP BTP для SAP Business One по принципу clean core для penka, включая автоматизацию тендеров на основе GAEB, на SAP HANA Cloud.',
       title: 'penka',
-      subtitle: 'Расширения SAP BTP для SAP Business One по принципу clean core · с 2024 года',
+      subtitle: 'Расширения SAP BTP для SAP Business One по принципу clean core · с 2023 года',
       about: {
         title: 'О проекте',
         paragraphs: [
@@ -340,19 +348,20 @@ export default {
           ]
         },
         {
-          title: 'Текущий фокус: тендеры GAEB',
-          text: 'Сейчас основная работа — процесс тендеров в Германии на основе GAEB, немецкого стандарта обмена данными строительных тендеров, например сметами работ (Leistungsverzeichnisse).',
+          title: 'Текущий фокус: автоматизация тендеров (GAEB)',
+          text: 'GAEB (Gemeinsamer Ausschuss Elektronik im Bauwesen) — формат электронного обмена данными в строительстве Германии, Австрии и Швейцарии (DACH) для тендеров, смет, распределения заказов и расчётов. Это общепринятый цифровой стандарт ведомостей объёмов работ (Leistungsverzeichnis, LV), который заменяет объёмные бумажные папки и неструктурированные Excel-файлы. Сейчас моя основная работа — автоматизация процесса тендеров на основе данных GAEB.',
           items: [
-            { icon: 'documents', text: 'Процесс тендеров GAEB на SAP BTP' },
+            { icon: 'documents', text: 'Обработка ведомостей объёмов работ (LV) из файлов GAEB' },
+            { icon: 'process', text: 'Автоматизированный процесс тендеров на SAP BTP' },
             { icon: 'connected', text: 'Связка с SAP Business One' }
           ]
         }
       ],
       role: [
-        'Проектирование и разработка расширений SAP BTP для SAP Business One с 2024 года',
+        'Проектирование и разработка расширений SAP BTP для SAP Business One с 2023 года',
         'Архитектура clean core: своя логика на SAP BTP, стандартный SAP Business One',
         'SAP HANA Cloud, CAP и Fiori / SAPUI5',
-        'Процесс тендеров GAEB — текущий основной фокус'
+        'Автоматизация процесса тендеров на основе GAEB — текущий основной фокус'
       ]
     }
   },

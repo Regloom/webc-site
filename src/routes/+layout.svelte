@@ -9,6 +9,7 @@
   import { click, openLink } from '#lib/attachments.js';
   import { CONTACTS, LANGS, THEMES } from '#lib/config.js';
   import { Settings, setSettings } from '#lib/settings.svelte.js';
+  import { jsonLdScript, structuredData } from '#lib/structured-data.js';
 
   let { data, children } = $props();
 
@@ -43,8 +44,8 @@
 </script>
 
 <svelte:head>
-  <title>{t.meta.title}</title>
-  <meta name="description" content={t.meta.description} />
+  <!-- JSON-LD built from our own static data; jsonLdScript escapes `<` -->
+  {@html jsonLdScript(structuredData(t, settings.lang))}
 </svelte:head>
 
 <ui5-shellbar

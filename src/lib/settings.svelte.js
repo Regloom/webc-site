@@ -1,7 +1,8 @@
 import { createContext } from 'svelte';
+import { goto } from '$app/navigation';
 import { setTheme } from '@ui5/webcomponents-base/dist/config/Theme.js';
 import { setLanguage } from '@ui5/webcomponents-base/dist/config/Language.js';
-import { UI5_THEMES } from './config.js';
+import { DEFAULT_LANG, UI5_THEMES } from './config.js';
 import en from './i18n/en.js';
 import ru from './i18n/ru.js';
 
@@ -37,6 +38,14 @@ export class Settings {
     setCookie('lang', lang);
     document.documentElement.lang = lang;
     setLanguage(lang);
+
+    // An explicit ?lang= in the address bar would win over the cookie on reload, so keep it in sync
+    const url = new URL(location.href);
+    if (url.searchParams.has('lang')) {
+      if (lang === DEFAULT_LANG) url.searchParams.delete('lang');
+      else url.searchParams.set('lang', lang);
+      goto(url, { shallow: true, replace: true });
+    }
   }
 
   /** @param {string} theme */

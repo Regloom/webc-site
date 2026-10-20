@@ -1,5 +1,6 @@
 <script>
   import PageHeader from '#lib/components/PageHeader.svelte';
+  import Seo from '#lib/components/Seo.svelte';
   import { resolve } from '$app/paths';
   import { click, openLink } from '#lib/attachments.js';
   import { CONTACTS } from '#lib/config.js';
@@ -10,9 +11,7 @@
   let experience = $derived(t.experience);
 </script>
 
-<svelte:head>
-  <title>{experience.title} · {t.shell.name}</title>
-</svelte:head>
+<Seo title={`${experience.title} · ${t.shell.name}`} description={t.seo.experience} />
 
 <PageHeader title={experience.title} subtitle={experience.subtitle}>
   {#snippet actions()}

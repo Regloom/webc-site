@@ -50,6 +50,7 @@ import '@ui5/webcomponents-icons/dist/official-service.js';
 import '@ui5/webcomponents-icons/dist/paper-plane.js';
 import '@ui5/webcomponents-icons/dist/payment-approval.js';
 import '@ui5/webcomponents-icons/dist/print.js';
+import '@ui5/webcomponents-icons/dist/process.js';
 import '@ui5/webcomponents-icons/dist/product.js';
 import '@ui5/webcomponents-icons/dist/sap-logo-shape.js';
 import '@ui5/webcomponents-icons/dist/sap-ui5.js';

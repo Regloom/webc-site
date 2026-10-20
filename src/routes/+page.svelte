@@ -1,5 +1,6 @@
 <script>
   import { resolve } from '$app/paths';
+  import Seo from '#lib/components/Seo.svelte';
   import Tile from '#lib/components/Tile.svelte';
   import TileGroup from '#lib/components/TileGroup.svelte';
   import { CONTACTS } from '#lib/config.js';
@@ -36,6 +37,8 @@
     { id: 'contact', tiles: contacts }
   ];
 </script>
+
+<Seo title={t.meta.title} description={t.meta.description} />
 
 <div class="page">
   <section class="intro">

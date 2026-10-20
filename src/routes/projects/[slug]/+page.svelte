@@ -1,5 +1,6 @@
 <script>
   import PageHeader from '#lib/components/PageHeader.svelte';
+  import Seo from '#lib/components/Seo.svelte';
   import VideoEmbed from '#lib/components/VideoEmbed.svelte';
   import { click, openLink } from '#lib/attachments.js';
   import { PROJECTS } from '#lib/projects.js';
@@ -15,10 +16,7 @@
   let website = $derived(project.url[settings.lang] ?? project.url.en);
 </script>
 
-<svelte:head>
-  <title>{text.title} · {t.shell.name}</title>
-  <meta name="description" content={text.about.paragraphs[0]} />
-</svelte:head>
+<Seo title={`${text.title} · ${t.shell.name}`} description={text.description} />
 
 <PageHeader title={text.title} subtitle={text.subtitle} icon={project.icon}>
   {#snippet actions()}
@@ -80,22 +78,6 @@
     </div>
   </ui5-card>
 
-  {#if project.videos?.length}
-    <ui5-card class="full-width">
-      <ui5-card-header slot="header" title-text={labels.videos} subtitle-text={labels.videosNote}></ui5-card-header>
-      <ul class="card-body videos">
-        {#each project.videos as video (video.id)}
-          <li>
-            <a class="video" href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer">
-              <img src={`https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`} alt="" width="320" height="180" loading="lazy" />
-              <span class="video-title">{video.title}</span>
-              <span class="video-date">{video.date}</span>
-            </a>
-          </li>
-        {/each}
-      </ul>
-    </ui5-card>
-  {/if}
 </div>
 
 <style>
@@ -121,8 +103,7 @@
   }
 
   .features,
-  .role,
-  .videos {
+  .role {
     margin: 0;
     list-style: none;
   }
@@ -154,49 +135,6 @@
     margin-bottom: 1rem;
     list-style: disc;
     line-height: 1.8;
-  }
-
-  .videos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
-    gap: 1rem;
-  }
-
-  .video {
-    display: flex;
-    flex-direction: column;
-    gap: 0.375rem;
-    height: 100%;
-    color: var(--sapTextColor);
-    text-decoration: none;
-    border-radius: var(--sapElement_BorderCornerRadius);
-  }
-
-  .video:hover .video-title {
-    color: var(--sapLinkColor);
-  }
-
-  .video:focus-visible {
-    outline: var(--sapContent_FocusWidth) var(--sapContent_FocusStyle) var(--sapContent_FocusColor);
-    outline-offset: 0.25rem;
-  }
-
-  .video img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: var(--sapElement_BorderCornerRadius);
-    background: var(--sapList_Background);
-  }
-
-  .video-title {
-    line-height: 1.4;
-  }
-
-  .video-date {
-    font-size: var(--sapFontSmallSize);
-    color: var(--sapContent_LabelColor);
   }
 
   @media (max-width: 900px) {

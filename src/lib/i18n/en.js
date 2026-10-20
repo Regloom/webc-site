@@ -1,8 +1,16 @@
 export default {
   meta: {
-    title: 'Egor Tokarev — SAP BTP Developer',
+    title: 'Egor Tokarev — SAP BTP Full-Stack Developer & Architect',
     description:
-      'SAP BTP full-stack developer and architect with 15+ years in SAP: CAP, SAP HANA, Fiori/UI5, Cloud Foundry, SAP Banking — and AI-assisted development with Claude Code, GitHub Copilot and SAP Joule.'
+      'SAP BTP full-stack developer and architect with 15+ years in SAP: CAP, HANA Cloud, Fiori/UI5, SAP Business One, clean core and AI-assisted development.'
+  },
+
+  seo: {
+    jobTitle: 'SAP BTP Full-Stack Developer & Architect',
+    imageAlt: 'Egor Tokarev — SAP BTP Full-Stack Developer & Architect',
+    me: 'Profile of Egor Tokarev, SAP BTP full-stack developer and architect: CAP, SAP HANA Cloud, Fiori/UI5, SAP Business One, SAP Banking and AI-assisted development.',
+    experience: '15+ years in SAP: SAP BTP full-stack development, 9 years at SAP as Payment Engine and Banking Services expert, SAP Fioneer, Accenture. Education and certifications.',
+    services: 'SAP BTP development with CAP and HANA Cloud, Fiori/UI5 apps, clean-core extensions for SAP Business One, SAP Banking consulting and AI-assisted development.'
   },
 
   shell: {
@@ -46,13 +54,13 @@ export default {
     },
     frischluftmanager: {
       title: 'Frischluftmanager',
-      subtitle: 'actoVent · since 2024',
+      subtitle: 'actoVent · since 2023',
       description: 'Fresh air as a service: a digital platform for ventilation operations on SAP BTP.'
     },
     penka: {
       title: 'penka',
-      subtitle: 'Clean core · since 2024',
-      description: 'SAP BTP extensions for SAP Business One — now focused on GAEB tenders.'
+      subtitle: 'Clean core · since 2023',
+      description: 'SAP BTP extensions for SAP Business One — now automating the tender process (GAEB).'
     },
     github: { title: 'GitHub' },
     email: { title: 'Email' },
@@ -143,7 +151,7 @@ export default {
         company: 'actoVent GmbH',
         role: 'Senior Software Developer',
         period: 'Nov 2023 — present',
-        text: 'Full-stack SAP BTP development on Cloud Foundry following SAP best practices: CAP back ends and Fiori Elements front ends. Since 2024 I have been actively developing and supporting two projects of the same group: the Frischluftmanager platform, including its warehouse module, and clean-core SAP BTP extensions for penka, now focused on GAEB tenders. Both run on SAP HANA Cloud, integrated with on-premise SAP Business One.',
+        text: 'Full-stack SAP BTP development on Cloud Foundry following SAP best practices: CAP back ends and Fiori Elements front ends. Since 2023 I have been working on two projects of the same group: I rewrote the Frischluftmanager platform from the ground up and develop and support it, including its warehouse module, and I build clean-core SAP BTP extensions for penka, now focused on automating the tender process based on GAEB. Both run on SAP HANA Cloud, integrated with on-premise SAP Business One.',
         tags: ['SAP BTP', 'SAP HANA Cloud', 'CAP', 'Fiori Elements', 'SAP Business One', 'GAEB'],
         projects: ['frischluftmanager', 'penka']
       },
@@ -268,13 +276,12 @@ export default {
     website: 'Visit website',
     youtube: 'YouTube channel',
     role: 'My role',
-    videos: 'Videos',
-    videosNote: 'Videos are in German.',
     play: 'Play video',
 
     frischluftmanager: {
+      description: 'Frischluftmanager: fresh air as a service on SAP BTP — dashboards, filter maintenance and a warehouse module, integrated with SAP Business One.',
       title: 'Frischluftmanager',
-      subtitle: 'Fresh air as a service · actoVent · since 2024',
+      subtitle: 'Fresh air as a service · actoVent · since 2023',
       about: {
         title: 'About the product',
         paragraphs: [
@@ -296,7 +303,7 @@ export default {
           ]
         },
         {
-          title: 'Warehouse module (built by me)',
+          title: 'Warehouse module',
           items: [
             { icon: 'shelf', text: 'Storage and stock management' },
             { icon: 'bar-code', text: 'Goods scanning with SAPUI5 mobile apps' },
@@ -309,7 +316,7 @@ export default {
         }
       ],
       role: [
-        'Active development and support of the platform since 2024',
+        'Rewrote the platform from the ground up; developing and supporting it since 2023',
         'Full-stack development on SAP BTP, Cloud Foundry, with SAP HANA Cloud',
         'CAP (Node.js) services and CDS data models',
         'Fiori Elements and SAPUI5 apps in the SAP BTP launchpad',
@@ -319,8 +326,9 @@ export default {
     },
 
     penka: {
+      description: 'Clean-core SAP BTP extensions for SAP Business One at penka, including tender process automation based on GAEB, on SAP HANA Cloud.',
       title: 'penka',
-      subtitle: 'Clean-core SAP BTP extensions for SAP Business One · since 2024',
+      subtitle: 'Clean-core SAP BTP extensions for SAP Business One · since 2023',
       about: {
         title: 'About the project',
         paragraphs: [
@@ -340,19 +348,20 @@ export default {
           ]
         },
         {
-          title: 'Current focus: GAEB tenders',
-          text: 'Today my main work is the tender process in Germany based on GAEB — the German standard for exchanging construction tender data such as bills of quantities (Leistungsverzeichnisse).',
+          title: 'Current focus: tender automation (GAEB)',
+          text: 'GAEB (Gemeinsamer Ausschuss Elektronik im Bauwesen) is the data exchange format used in construction across Germany, Austria and Switzerland for tenders, cost estimates, contract awards and billing. It is the common digital standard for bills of quantities (Leistungsverzeichnis, LV) and replaces bulky paper folders and unstructured Excel files. My current main work is automating the tender process based on GAEB data.',
           items: [
-            { icon: 'documents', text: 'GAEB tender process on SAP BTP' },
+            { icon: 'documents', text: 'Bills of quantities (LV) processed from GAEB files' },
+            { icon: 'process', text: 'Automated tender process on SAP BTP' },
             { icon: 'connected', text: 'Connected to SAP Business One' }
           ]
         }
       ],
       role: [
-        'Design and development of SAP BTP extensions for SAP Business One since 2024',
+        'Design and development of SAP BTP extensions for SAP Business One since 2023',
         'Clean-core architecture: in-house logic on SAP BTP, standard SAP Business One',
         'SAP HANA Cloud, CAP and Fiori / SAPUI5',
-        'GAEB tender process — the current main focus'
+        'Tender process automation based on GAEB — the current main focus'
       ]
     }
   },

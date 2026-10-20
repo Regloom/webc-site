@@ -1,15 +1,14 @@
 <script>
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
+  import Seo from '#lib/components/Seo.svelte';
   import { getSettings } from '#lib/settings.svelte.js';
 
   const settings = getSettings();
   let t = $derived(settings.t);
 </script>
 
-<svelte:head>
-  <title>{page.status} · {t.shell.name}</title>
-</svelte:head>
+<Seo title={`${page.status} · ${t.shell.name}`} noindex />
 
 <div class="page error">
   <p class="status">{page.status}</p>

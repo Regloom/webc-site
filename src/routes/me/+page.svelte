@@ -1,5 +1,6 @@
 <script>
   import PageHeader from '#lib/components/PageHeader.svelte';
+  import Seo from '#lib/components/Seo.svelte';
   import { click, openLink } from '#lib/attachments.js';
   import { CONTACTS } from '#lib/config.js';
   import { getSettings } from '#lib/settings.svelte.js';
@@ -9,9 +10,7 @@
   let me = $derived(t.me);
 </script>
 
-<svelte:head>
-  <title>{t.tiles.profile.title} · {t.shell.name}</title>
-</svelte:head>
+<Seo title={`${t.tiles.profile.title} · ${t.shell.name}`} description={t.seo.me} type="profile" />
 
 <PageHeader title={t.shell.name} subtitle={me.title} initials="ET">
   <p class="location"><ui5-icon name="map"></ui5-icon>{t.shell.location}</p>

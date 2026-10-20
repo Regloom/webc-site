@@ -17,6 +17,9 @@ on top of **SvelteKit 3 / Svelte 5**.
 - **English and Russian**, chosen from a cookie or the browser's `Accept-Language`
 - **Server-rendered preferences:** theme and language are read from cookies in `hooks.server.js` and
   written into `<html>` and the UI5 boot config, so the page never flashes the wrong theme or language
+- **SEO:** per-page title and description, canonical and `hreflang` links (`?lang=ru` gives each language
+  its own URL), Open Graph / Twitter cards with `static/og-image.png`, JSON-LD `Person` + `WebSite`,
+  `robots.txt` and a generated `/sitemap.xml`
 - **Privacy-friendly video:** YouTube embeds load only after a click, via `youtube-nocookie.com`
 - **Small bundle:** only the UI5 components and icons in use are imported (`src/lib/ui5.js`)
 
