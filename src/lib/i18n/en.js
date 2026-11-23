@@ -1,21 +1,21 @@
 export default {
   meta: {
-    title: 'Egor Tokarev — SAP BTP Full-Stack Developer & Architect',
+    title: 'Egor Tokarev — Forward-Deployed Engineer · SAP BTP & AI',
     description:
-      'SAP BTP full-stack developer and architect with 15+ years in SAP: CAP, HANA Cloud, Fiori/UI5, SAP Business One, clean core and AI-assisted development.'
+      'Forward-deployed engineer for SAP BTP and AI: I work directly with the client, inside their real systems, from the first workshop to go-live. 15+ years in SAP: CAP, HANA Cloud, Fiori/UI5, SAP Business One, clean core.'
   },
 
   seo: {
-    jobTitle: 'SAP BTP Full-Stack Developer & Architect',
-    imageAlt: 'Egor Tokarev — SAP BTP Full-Stack Developer & Architect',
-    me: 'Profile of Egor Tokarev, SAP BTP full-stack developer and architect: CAP, SAP HANA Cloud, Fiori/UI5, SAP Business One, SAP Banking and AI-assisted development.',
+    jobTitle: 'Forward-Deployed Engineer · SAP BTP & AI',
+    imageAlt: 'Egor Tokarev — Forward-Deployed Engineer · SAP BTP & AI',
+    me: 'Profile of Egor Tokarev, forward-deployed engineer and SAP BTP architect: CAP, SAP HANA Cloud, Fiori/UI5, SAP Business One, SAP Banking and AI-assisted development.',
     experience: '15+ years in SAP: SAP BTP full-stack development, 9 years at SAP as Payment Engine and Banking Services expert, SAP Fioneer, Accenture. Education and certifications.',
-    services: 'SAP BTP development with CAP and HANA Cloud, Fiori/UI5 apps, clean-core extensions for SAP Business One, SAP Banking consulting and AI-assisted development.'
+    services: 'Forward-deployed engineering on the client side: SAP BTP development with CAP and HANA Cloud, Fiori/UI5 apps, clean-core extensions for SAP Business One, SAP Banking consulting and AI-assisted development.'
   },
 
   shell: {
     name: 'Egor Tokarev',
-    role: 'SAP BTP Developer',
+    role: 'Forward-Deployed Engineer · SAP BTP',
     location: 'Yerevan, Armenia',
     back: 'Back',
     home: 'Home',
@@ -31,7 +31,7 @@ export default {
   home: {
     hello: "Hi, I'm Egor",
     tagline:
-      "SAP BTP developer who speaks both business and code. For 15+ years I've been turning banking and enterprise processes into working SAP solutions — from the first workshop to go-live.",
+      "Forward-deployed engineer for SAP BTP and AI. I work directly with the client, inside their real systems — no layers in between: I gather requirements, design, build, deploy and support the solution myself. 15+ years of turning banking and enterprise processes into working SAP solutions.",
     ai: 'AI-assisted development is part of my daily workflow: Claude Code, GitHub Copilot, opencode, MCP and skills.',
     hint: 'This site is built like an SAP Fiori launchpad. Pick a tile to start.',
     groups: { about: 'About me', projects: 'Projects', contact: 'Get in touch' }
@@ -69,13 +69,14 @@ export default {
   },
 
   me: {
-    title: 'SAP Cloud Full-Stack Developer & Architect · SAP Banking expert',
+    title: 'Forward-Deployed Engineer · SAP BTP Full-Stack & Architect · SAP Banking expert',
     contact: 'Contact me',
     cv: 'Download CV',
     about: {
       title: 'About',
       paragraphs: [
-        "I'm an SAP developer and solution architect with 15+ years in solution design and implementation, nine of them at SAP. I work on both sides of a project: I can run a requirements workshop with business users, then design, build, deploy and support the solution myself.",
+        "I'm a forward-deployed engineer: a software engineer who works directly with the client and builds, customises and deploys software and AI solutions inside the client's real environment. No account managers or hand-offs in between — I run the requirements workshop with business users, then design, build, deploy and support the solution myself.",
+        'Behind that are 15+ years in SAP solution design and implementation, nine of them at SAP.',
         'Today I build full-stack apps on SAP BTP: CAP (Node.js) and CDS services, SAP HANA Cloud, and SAPUI5 / Fiori Elements front ends on Cloud Foundry, integrated with S/4HANA, SAP Business One or third-party APIs over OData.',
         'Behind that is a strong classic SAP background — R/3, S/4HANA and ABAP — and deep payments and core banking expertise: SAP Payment Engine (SWIFT MT/MX, ISO 20022, SEPA, instant payments), Cards, Deposits and Loans Management.',
         "I've delivered across the full SDLC, from design to post-go-live support, in both Agile and Waterfall teams."
@@ -141,9 +142,9 @@ export default {
       {
         icon: 'developer-settings',
         company: 'Independent',
-        role: 'SAP Full-Stack Developer / Architect',
+        role: 'Forward-Deployed Engineer · SAP BTP & AI',
         period: 'Sep 2024 — present',
-        text: 'End-to-end SAP BTP projects: architecture, UI/UX, CDS data models, CAP services and MTA deployment on Cloud Foundry. Integration with S/4HANA, SAP Business One and third-party APIs over OData, plus AI-assisted development with SAP Joule and Claude.',
+        text: 'Working directly with clients inside their own SAP landscapes, end to end: requirements, architecture, UI/UX, CDS data models, CAP services and MTA deployment on Cloud Foundry. Integration with S/4HANA, SAP Business One and third-party APIs over OData, plus AI-assisted development with SAP Joule and Claude.',
         tags: ['CAP', 'CDS', 'SAPUI5', 'Cloud Foundry', 'OData', 'AI-assisted development']
       },
       {
@@ -214,8 +215,18 @@ export default {
 
   services: {
     title: 'Services',
-    subtitle: 'Where I can help your SAP project',
+    subtitle: 'Forward-deployed: I work with your team, in your systems, until it runs in production',
     items: [
+      {
+        icon: 'customer-briefing',
+        wide: true,
+        title: 'Forward-deployed engineering',
+        points: [
+          'Directly with you — no middlemen between business and code',
+          'Built and deployed in your real landscape: SAP BTP, S/4HANA, SAP Business One',
+          'One person from workshop to go-live and support'
+        ]
+      },
       {
         icon: 'ai',
         wide: true,

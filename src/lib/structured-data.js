@@ -38,6 +38,7 @@ export function structuredData(t, lang) {
           recognizedBy: { '@type': 'Organization', name: 'SAP' }
         })),
         knowsAbout: [
+          'Forward-deployed engineering',
           'SAP Business Technology Platform',
           'SAP Cloud Application Programming Model',
           'SAP HANA Cloud',

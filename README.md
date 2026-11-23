@@ -1,6 +1,6 @@
 # toegor.app
 
-Personal site of Egor Tokarev, SAP BTP full-stack developer and architect. It is built to look and feel
+Personal site of Egor Tokarev, forward-deployed engineer for SAP BTP and AI. It is built to look and feel
 like an **SAP Fiori launchpad** (Horizon theme), using [UI5 Web Components](https://ui5.github.io/webcomponents/)
 on top of **SvelteKit 3 / Svelte 5**.
 

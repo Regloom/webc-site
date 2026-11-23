@@ -1,21 +1,21 @@
 export default {
   meta: {
-    title: 'Егор Токарев — full-stack разработчик и архитектор SAP BTP',
+    title: 'Егор Токарев — Forward-Deployed Engineer · SAP BTP и ИИ',
     description:
-      'Full-stack разработчик и архитектор SAP BTP, 15+ лет в SAP: CAP, HANA Cloud, Fiori/UI5, SAP Business One, clean core и разработка с ИИ.'
+      'Forward-deployed engineer по SAP BTP и ИИ: работаю напрямую с заказчиком, в его реальных системах — от первого воркшопа до go-live. 15+ лет в SAP: CAP, HANA Cloud, Fiori/UI5, SAP Business One, clean core.'
   },
 
   seo: {
-    jobTitle: 'Full-stack разработчик и архитектор SAP BTP',
-    imageAlt: 'Егор Токарев — full-stack разработчик и архитектор SAP BTP',
-    me: 'Профиль Егора Токарева, full-stack разработчика и архитектора SAP BTP: CAP, SAP HANA Cloud, Fiori/UI5, SAP Business One, SAP Banking и разработка с ИИ.',
+    jobTitle: 'Forward-Deployed Engineer · SAP BTP и ИИ',
+    imageAlt: 'Егор Токарев — Forward-Deployed Engineer · SAP BTP и ИИ',
+    me: 'Профиль Егора Токарева, forward-deployed engineer и архитектора SAP BTP: CAP, SAP HANA Cloud, Fiori/UI5, SAP Business One, SAP Banking и разработка с ИИ.',
     experience: '15+ лет в SAP: full-stack разработка на SAP BTP, 9 лет в SAP экспертом Payment Engine и Banking Services, SAP Fioneer, Accenture. Образование и сертификаты.',
-    services: 'Разработка на SAP BTP с CAP и HANA Cloud, приложения Fiori/UI5, расширения SAP Business One по принципу clean core, консалтинг SAP Banking и разработка с ИИ.'
+    services: 'Forward-deployed разработка на стороне заказчика: SAP BTP с CAP и HANA Cloud, приложения Fiori/UI5, расширения SAP Business One по принципу clean core, консалтинг SAP Banking и разработка с ИИ.'
   },
 
   shell: {
     name: 'Егор Токарев',
-    role: 'SAP BTP разработчик',
+    role: 'Forward-Deployed Engineer · SAP BTP',
     location: 'Ереван, Армения',
     back: 'Назад',
     home: 'Главная',
@@ -31,7 +31,7 @@ export default {
   home: {
     hello: 'Привет, я Егор',
     tagline:
-      'SAP BTP разработчик, который говорит и на языке бизнеса, и на языке кода. Больше 15 лет превращаю банковские и корпоративные процессы в работающие SAP-решения — от первого воркшопа до go-live.',
+      'Forward-deployed engineer по SAP BTP и ИИ. Работаю напрямую с заказчиком, в его реальных системах, без посредников: сам собираю требования, проектирую, разрабатываю, внедряю и сопровождаю решение. Больше 15 лет превращаю банковские и корпоративные процессы в работающие SAP-решения.',
     ai: 'Разработка с ИИ — часть моей ежедневной работы: Claude Code, GitHub Copilot, opencode, MCP и skills.',
     hint: 'Сайт устроен как SAP Fiori launchpad. Выберите плитку.',
     groups: { about: 'Обо мне', projects: 'Проекты', contact: 'Связаться' }
@@ -69,13 +69,14 @@ export default {
   },
 
   me: {
-    title: 'Full-stack разработчик и архитектор SAP Cloud · эксперт SAP Banking',
+    title: 'Forward-Deployed Engineer · full-stack и архитектура SAP BTP · эксперт SAP Banking',
     contact: 'Написать мне',
     cv: 'Скачать CV',
     about: {
       title: 'Обо мне',
       paragraphs: [
-        'Я SAP-разработчик и архитектор решений, больше 15 лет в проектировании и внедрении, из них девять — в SAP. Работаю по обе стороны проекта: могу провести воркшоп по требованиям с бизнесом, а потом сам спроектировать, разработать, развернуть и сопровождать решение.',
+        'Я forward-deployed engineer (FDE): инженер, который работает напрямую с заказчиком и сам строит, настраивает и внедряет ПО и ИИ-решения в его реальной среде. Без аккаунт-менеджеров и передачи задач по цепочке — провожу воркшоп по требованиям с бизнесом, а потом сам проектирую, разрабатываю, разворачиваю и сопровождаю решение.',
+        'За этим — больше 15 лет в проектировании и внедрении SAP-решений, из них девять — в SAP.',
         'Сейчас делаю full-stack приложения на SAP BTP: сервисы на CAP (Node.js) и CDS, SAP HANA Cloud, интерфейсы на SAPUI5 и Fiori Elements в Cloud Foundry, с интеграцией с S/4HANA, SAP Business One или внешними API через OData.',
         'За этим стоит сильный опыт классического SAP — R/3, S/4HANA, ABAP — и глубокая экспертиза в платежах и core banking: SAP Payment Engine (SWIFT MT/MX, ISO 20022, SEPA, мгновенные платежи), управление картами, депозитами и кредитами.',
         'Веду проекты на всех этапах SDLC — от дизайна до поддержки после запуска, — и в Agile, и в Waterfall командах.'
@@ -141,9 +142,9 @@ export default {
       {
         icon: 'developer-settings',
         company: 'Независимая практика',
-        role: 'Full-stack разработчик / архитектор SAP',
+        role: 'Forward-Deployed Engineer · SAP BTP и ИИ',
         period: 'сен 2024 — н. в.',
-        text: 'SAP BTP проекты под ключ: архитектура, UI/UX, модели данных на CDS, сервисы на CAP и деплой MTA в Cloud Foundry. Интеграция с S/4HANA, SAP Business One и сторонними API через OData, а также разработка с помощью ИИ — SAP Joule и Claude.',
+        text: 'Работаю напрямую с заказчиками в их собственных SAP-ландшафтах, под ключ: требования, архитектура, UI/UX, модели данных на CDS, сервисы на CAP и деплой MTA в Cloud Foundry. Интеграция с S/4HANA, SAP Business One и сторонними API через OData, а также разработка с помощью ИИ — SAP Joule и Claude.',
         tags: ['CAP', 'CDS', 'SAPUI5', 'Cloud Foundry', 'OData', 'Разработка с ИИ']
       },
       {
@@ -214,8 +215,18 @@ export default {
 
   services: {
     title: 'Услуги',
-    subtitle: 'Чем я могу помочь вашему SAP-проекту',
+    subtitle: 'Forward-deployed: работаю с вашей командой, в ваших системах, пока решение не заработает в проде',
     items: [
+      {
+        icon: 'customer-briefing',
+        wide: true,
+        title: 'Forward-deployed engineering',
+        points: [
+          'Напрямую с вами — без посредников между бизнесом и кодом',
+          'Разработка и внедрение в вашем реальном ландшафте: SAP BTP, S/4HANA, SAP Business One',
+          'Один человек от воркшопа до go-live и поддержки'
+        ]
+      },
       {
         icon: 'ai',
         wide: true,
